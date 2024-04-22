@@ -3,6 +3,7 @@ export default {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     colors:{
+      'white' : '#FFF',
       brand:{
         DEFAULT:'hsl(180, 66%, 49%)',
         950:"hsl(257, 27%, 26%)"
