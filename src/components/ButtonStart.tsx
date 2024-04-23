@@ -3,7 +3,7 @@ type IButtonStart = {
 }
 const ButtonStart = ({title} : IButtonStart) => {
     return (
-        <button className="w-full rounded-full bg-brand text-white font-bold text-xl  py-3">{title}</button>
+        <button className="px-8 rounded-full bg-brand text-white font-bold text-xl py-3">{title}</button>
     )
 }
 

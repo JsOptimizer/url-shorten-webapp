@@ -1,7 +1,7 @@
 import logo from '../assets/images/logo.svg'
 import working from '../assets/images/illustration-working.svg'
 import { useState } from 'react'
-import { MenuModal } from '../components'
+import { ButtonStart, MenuModal } from '../components'
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -13,21 +13,43 @@ const Header = () => {
     )
     return (
         <div>
+            {/*Mobile navbar start*/}
             <div className=" flex justify-between items-center p-6">
-                <img src={logo} alt="Logo" />
-                <button onClick={() => setIsOpen(!isOpen)}>
+                <div className='lg:hidden'>
+                    <img src={logo} alt="Logo" />
+                </div>
+                <button className='lg:hidden block' onClick={() => setIsOpen(!isOpen)}>
                     {menuStatus}
                 </button>
             </div>
             {
                 isOpen && <MenuModal />
             }
-            <div className='pl-4'>
+            <div className='flex lg:hidden pl-4'>
                 {
                     !isOpen && <img src={working} alt="Working illustration" />
 
                 }
             </div>
+            {/*Mobile navbar end*/}
+            {/*Desktop navbar start*/}
+            <div className='hidden lg:flex justify-between items-center  px-20'>
+                <div className='flex items-center justify-between gap-x-8 '>
+                    <img src={logo} alt="Logo" />
+                    <ul className='flex text-neutral font-bold text-xl items-center gap-x-4'>
+                        <li >Features</li>
+                        <li >Pricing</li>
+                        <li>Resources</li>
+                    </ul>
+                </div>
+                <div className=' flex justify-between items-center gap-x-6'>
+                        <ul>
+                            <li className=' text-neutral font-bold text-xl'>Login</li>
+                        </ul>
+                             <ButtonStart title={'Sign up'} />      
+                    </div>
+            </div>
+            {/*Desktop navbar end*/}
         </div>
     )
 }

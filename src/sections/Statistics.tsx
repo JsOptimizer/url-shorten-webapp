@@ -17,11 +17,11 @@ const Statistics = () => {
           Track how your links are performing accross the web with our advanced statistics dashboard
         </p>
       </div>
-      <div className="mt-20 flex flex-col items-center ">
+      <div className="mt-20 flex flex-col items-center lg:grid lg:gap-x-6 grid-cols-3">
         <StatisticsCard title={title} description={description} icone={brand} />
-        <div className="border-r-8 border-brand h-24  content-center"></div>
+        <div className="lg:hidden border-r-8 border-brand h-24  content-center"></div>
         <StatisticsCard title={title} description={description} icone={record} />
-        <div className="border-r-8 border-brand h-24  content-center"></div>
+        <div className="lg:hidden border-r-8 border-brand h-24  content-center"></div>
         <StatisticsCard title={title} description={description} icone={fully} />
       </div>
     </div>

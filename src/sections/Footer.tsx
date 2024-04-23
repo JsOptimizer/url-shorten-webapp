@@ -1,7 +1,7 @@
 import { FooterLink, MediaIcons } from '../components'
 const Footer = () => {
   return (
-    <div className='py-12 bg-neutral-950'>
+    <div className=' lg:grid grid-cols-5 justify-start items-baseline lg:py-4 py-12 bg-neutral-950'>
       <div className='text-center'>
         <p className='text-3xl text-white font-bold'>Shortly</p>
       </div>

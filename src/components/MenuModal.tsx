@@ -13,8 +13,7 @@ const MenuModal = () => {
             <li>Login</li>
             <div className="w-full">
                 <ButtonStart title={"Sign Up"} />
-            </div>
-         
+            </div> 
         </ul>
     </div>
   )
