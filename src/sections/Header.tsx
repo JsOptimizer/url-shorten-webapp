@@ -19,11 +19,14 @@ const Header = () => {
                     {menuStatus}
                 </button>
             </div>
-             {
-                    isOpen && <MenuModal />
-                }
+            {
+                isOpen && <MenuModal />
+            }
             <div className='pl-4'>
-                <img src={working} alt="Working illustration" />
+                {
+                    !isOpen && <img src={working} alt="Working illustration" />
+
+                }
             </div>
         </div>
     )

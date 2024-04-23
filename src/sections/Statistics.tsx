@@ -7,18 +7,21 @@ const Statistics = () => {
   const title = 'Advanced statistics'
   const description = 'Track how your links are performing accross the web with our advanced statistics dashboard'
   return (
-    <div className="px-8 pt-36 pb-20 bg-neutral ">
-
-      <div className=" text-center">
-        <h2 className="font-bold text-3xl">Advanced statistics </h2>
-        <p className="">
+    <div className=" px-8 pb-20 bg-neutral ">     
+      <div className="relative -top-[76px]"> {/* Ajoute une marge négative pour l'espace en haut */}
+        <ShortLink />
+      </div>
+      <div className="text-center">
+        <h2 className="font-bold text-3xl bg">Advanced statistics </h2>
+        <p className="pt-4">
           Track how your links are performing accross the web with our advanced statistics dashboard
         </p>
       </div>
-      <ShortLink />
-      <div className="space-y-24">
+      <div className="mt-20 flex flex-col items-center ">
         <StatisticsCard title={title} description={description} icone={brand} />
+        <div className="border-r-8 border-brand h-24  content-center"></div>
         <StatisticsCard title={title} description={description} icone={record} />
+        <div className="border-r-8 border-brand h-24  content-center"></div>
         <StatisticsCard title={title} description={description} icone={fully} />
       </div>
     </div>

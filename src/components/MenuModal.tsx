@@ -11,7 +11,10 @@ const MenuModal = () => {
         <hr className="border-1/8 w-full text-neutral"/>
         <ul className="w-full text-center space-y-4 font-bold text-xl py-6">
             <li>Login</li>
-            <ButtonStart title={"Sign Up"} />
+            <div className="w-full">
+                <ButtonStart title={"Sign Up"} />
+            </div>
+         
         </ul>
     </div>
   )
