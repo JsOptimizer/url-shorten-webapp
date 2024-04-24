@@ -26,7 +26,10 @@ export default {
     extend: {
       fontFamily:{
         'poppins':['Poppins']
-      }
+      },
+       screens: {
+        'pc': {'min': '1024px'}
+      },
     },
   },
   plugins: [],

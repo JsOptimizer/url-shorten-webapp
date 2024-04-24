@@ -1,7 +1,10 @@
 import { useState } from 'react'
-import backgroundImage from '../assets/images/bg-boost-mobile.svg'
+import backgroundImageM from '../assets/images/bg-shorten-mobile.svg'
+import backgroundImageD from '../assets/images/bg-shorten-desktop.svg'
+
 import AddLink from './AddLink'
 const ShortLink = () => {
+  const mobile = false
   const [input, setInput] = useState('')
   const [error, setError] = useState('')
   const [listLink, setListLink] = useState<string []>([]);
@@ -24,9 +27,9 @@ const ShortLink = () => {
   }
   return (
     <div>
-      <form className="lg:flex bg-brand-950 lg:h-32 shadow-md p-4 rounded-md space-y-4 w-full lg:gap-x-4 justify-between items-center lg:px-12 " style={{ backgroundImage: `url(${backgroundImage})` }} >
+      <form className="lg:flex bg-brand-950 lg:h-32 shadow-md p-4 rounded-md space-y-4 w-full lg:gap-x-4 justify-between items-center lg:px-12 " style={{ backgroundImage: mobile? `url(${backgroundImageM})` : `url(${backgroundImageD})`}} >
         <div className='lg:w-[75%]'>
-          <input value={input} onChange={handleChange} className={`h-14  shadow-md rounded-md w-full border px-4 py-2 ${error ? 'border-secondary' : ''}`} type="text" placeholder='Shorten a link here...' />
+          <input value={input} onChange={handleChange} className={`h-14 outline-none rounded-md w-full border px-4 py-2 ${error ? 'border-secondary' : ''}`} type="text" placeholder='Shorten a link here...' />
           {
             error && <p className='text-secondary'>{error}</p>
           }
