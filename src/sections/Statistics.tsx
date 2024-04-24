@@ -7,8 +7,8 @@ const Statistics = () => {
   const title = 'Advanced statistics'
   const description = 'Track how your links are performing accross the web with our advanced statistics dashboard'
   return (
-    <div className=" px-8 pb-20 bg-neutral ">     
-      <div className="relative -top-[76px]"> {/* Ajoute une marge négative pour l'espace en haut */}
+    <div className=" px-8 pb-20 bg-neutral ">
+      <div className="relative -top-[76px]"> 
         <ShortLink />
       </div>
       <div className="text-center">
@@ -17,11 +17,15 @@ const Statistics = () => {
           Track how your links are performing accross the web with our advanced statistics dashboard
         </p>
       </div>
-      <div className="mt-20 flex flex-col items-center lg:grid lg:gap-x-8 grid-cols-3">
-        <StatisticsCard title={title} description={description} icone={brand} />
-        <div className="lg:hidden border-r-8 border-brand h-24  content-center"></div>
-        <div className="lg:mt-14">
+      <div className="mt-20 flex flex-col items-center lg:grid grid-cols-3">
+        <div className=" lg:flex justify-center items-center">
+          <StatisticsCard title={title} description={description} icone={brand} />
+          <div className="hidden w-12 lg:flex flex-col border-brand border-b-8"></div>
+        </div>
+        <div className=" lg:hidden border-r-8 border-brand h-24  content-center"></div>
+        <div className="lg:mt-14 lg:flex justify-center items-center">
           <StatisticsCard title={title} description={description} icone={record} />
+          <div className="hidden w-12 lg:flex flex-col border-brand border-b-8"></div>
         </div>
         <div className="lg:hidden border-r-8 border-brand h-24  content-center"></div>
         <div className="lg:mt-28">
