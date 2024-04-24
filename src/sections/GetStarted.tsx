@@ -28,7 +28,7 @@ const GetStarted = () => {
           </p>
           <ButtonStart title={"Get Started"} />
         </div>
-        <div className="">
+        <div className="flex justify-end">
           <img src={working} alt="Working" />
         </div>
       </div>

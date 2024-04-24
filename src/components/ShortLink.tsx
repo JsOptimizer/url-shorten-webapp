@@ -27,7 +27,7 @@ const ShortLink = () => {
   }
   return (
     <div>
-      <form className="lg:flex bg-brand-950 lg:h-32 shadow-md p-4 rounded-md space-y-4 w-full lg:gap-x-4 justify-between items-center lg:px-12 " style={{ backgroundImage: mobile? `url(${backgroundImageM})` : `url(${backgroundImageD})`}} >
+      <form className="lg:flex bg-brand-950 lg:h-32 shadow-md p-4 rounded-md space-y-4 lg:space-y-0 w-full lg:gap-x-4 justify-between items-center lg:px-12 " style={{ backgroundImage: mobile? `url(${backgroundImageM})` : `url(${backgroundImageD})`}} >
         <div className='lg:w-[75%]'>
           <input value={input} onChange={handleChange} className={`h-14 outline-none rounded-md w-full border px-4 py-2 ${error ? 'border-secondary' : ''}`} type="text" placeholder='Shorten a link here...' />
           {
