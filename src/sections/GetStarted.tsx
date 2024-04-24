@@ -17,7 +17,7 @@ const GetStarted = () => {
       <div className="mb-12"> </div>
       {/*Mobile side end*/}
 
-      <div className="hidden pl-12 pc:grid grid-cols-2  ">
+      <div className="hidden lg:mt-24 lg:mb-10 pl-12 pc:grid grid-cols-2  ">
         <div className="text-start space-y-4">
           <h1 className="font-bold text-5xl">
             More than just <br/>shorter links

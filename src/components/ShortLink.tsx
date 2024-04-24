@@ -35,7 +35,7 @@ const ShortLink = () => {
           }
         </div>
         <div className='lg:w-[25%] '>
-          <button onClick={handleSubmit} className='h-14 border rounded-md bg-brand font-bold text-xl text-white px-4 py-2 text-center w-full'>Shorten it!</button>
+          <button onClick={handleSubmit} className='h-14 border rounded-md bg-brand hover:opacity-60 font-bold text-xl text-white px-4 py-2 text-center w-full'>Shorten it!</button>
         </div>
       </form>
       {
